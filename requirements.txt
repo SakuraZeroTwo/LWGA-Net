@@ -1,4 +1,16 @@
--r requirements/build.txt
--r requirements/optional.txt
--r requirements/runtime.txt
--r requirements/tests.txt
+
+numpy<2.0.0
+# 必须锁定 OpenCV < 4.10，否则会和旧版 Numpy 冲突
+opencv-python<4.10.0
+
+# --- MMDetection 基础依赖 ---
+matplotlib
+pycocotools
+terminaltables
+addict
+yapf
+six
+requests
+scipy
+cython
+Pillow
