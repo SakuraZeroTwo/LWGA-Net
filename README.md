@@ -71,21 +71,21 @@ LWGA-Net/
 └── ...
 ```
 
-###  开始训练
+##  开始训练
 本项目提供了一个自定义启动脚本 train_custom.py，它会自动注册 LWGA 和 ECA 模块，无需修改底层源码。
-#### 实验 1：训练 LWGA-Net (Ours)
+### 实验 1：训练 LWGA-Net (Ours)
 使用 ResNet-50 + Faster R-CNN + LWGA 模块：
 
 ```Bash
 python train_custom.py configs/lwga_experiments/faster_rcnn_lwga_r50_fpn_1x_coco.py
 ```
-#### 实验 2：训练 ECA-Net (Baseline)
+### 实验 2：训练 ECA-Net (Baseline)
 使用 ResNet-50 + Faster R-CNN + ECA 模块：
 code
 ```Bash
 python train_custom.py configs/eca_net/faster_rcnn_eca_r50_fpn_1x_coco.py
 ```
-#### 其他检测器
+### 其他检测器
 若需测试 Mask R-CNN 或 RetinaNet，只需更换配置文件路径即可：
 ```bash
 configs/lwga_experiments/mask_rcnn_lwga_r50_fpn_1x_coco.py
