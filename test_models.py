@@ -75,7 +75,7 @@ if __name__ == '__main__':
     )
 
     # -------------------------------------------------
-    # 测试 2: LWGA-Net (你的论文模型)
+    # 测试 2: LWGA-Net
     # -------------------------------------------------
     run_test(
         config_path='configs/lwga_experiments/faster_rcnn_lwga_r50_fpn_1x_coco.py',
