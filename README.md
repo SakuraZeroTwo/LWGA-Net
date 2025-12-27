@@ -70,7 +70,36 @@ LWGA-Net/
 ├── train_custom.py
 └── ...
 ```
+## 测试训练
+可以先测试test_modules文件，看看能否运行
+```bash
+python test_modules.py
+```
+正常运行结果示例：
+```bash
+>> 成功导入自定义模块 (ECA & LWGA)
 
+==================== 开始测试: ECA-Net ====================
+读取配置文件: configs/eca_net/faster_rcnn_eca_r50_fpn_1x_coco.py
+正在构建模型结构...
+运行设备: cuda
+正在进行前向传播 (Forward Pass)...
+✅ ECA-Net 测试通过！
+耗时: 3.3249 秒
+输出特征层数量: 5 (通常 FPN 输出 5 层)
+最深层特征图尺寸: torch.Size([1, 256, 13, 13])
+
+==================== 开始测试: LWGA-Net ====================
+读取配置文件: configs/lwga_experiments/faster_rcnn_lwga_r50_fpn_1x_coco.py
+正在构建模型结构...
+运行设备: cuda
+正在进行前向传播 (Forward Pass)...
+✅ LWGA-Net 测试通过！
+耗时: 0.0412 秒
+输出特征层数量: 5 (通常 FPN 输出 5 层)
+最深层特征图尺寸: torch.Size([1, 256, 13, 13])
+
+```
 ##  开始训练
 本项目提供了一个自定义启动脚本 train_custom.py，它会自动注册 LWGA 和 ECA 模块，无需修改底层源码。
 ### 实验 1：训练 LWGA-Net (Ours)
